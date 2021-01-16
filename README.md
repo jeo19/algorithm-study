@@ -1,9 +1,20 @@
-# GetYourLoanApp
-Hi! 
+# Algorithm to learn with JavaScript
+## - Insertion Sort Algorithm
+```javascript
+const numbers=[9,2,5,7,1,6,8,10];
 
-Welcome to the GitHub repository of the GetyourLoanApp application.
-This app is the demo app for the Pluralsight course [JavaScript Variables and Types](https://app.pluralsight.com/library/courses/javascript-variables-types/).
-
-You can download a copy of the code and follow along in the course.
-
-The application consists out of a simple HTML file, with some CSS and, most importantlty, a JavaScript file. 
+const insertionSort=(numberArray)=>{    
+    let i=1,j,temp;
+    for(i;i<numberArray.length;i++){
+        temp=numberArray[i];
+        for(j=i-1;j>=0 && temp<numberArray[j];j--)
+        {
+            numberArray[j+1]=numberArray[j];
+        }
+        numberArray[j+1]=temp;
+    }
+    return numberArray
+}
+console.log(insertionSort(numbers));
+# sort reult: [1,2,5,6,7,8,9,10]
+````
